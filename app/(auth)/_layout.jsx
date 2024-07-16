@@ -1,5 +1,6 @@
 import { Redirect, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+
 import { useGlobalContext } from "../../context/GlobalProvider";
 
 const AuthLayout = () => {
@@ -23,6 +24,7 @@ const AuthLayout = () => {
           }}
         />
       </Stack>
+
       <StatusBar backgroundColor="#161622" style="light" />
     </>
   );
