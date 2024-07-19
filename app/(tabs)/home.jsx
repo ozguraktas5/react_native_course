@@ -2,6 +2,8 @@ import { View, Text, FlatList } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "../../constants/images";
+import SearchInput from "../../components/SearchInput";
+import Trending from "../../components/Trending";
 
 const Home = () => {
   return (
@@ -25,12 +27,21 @@ const Home = () => {
               </View>
 
               <View className="mt-1.5">
-                <Image 
+                <Image
                   source={images.logoSmall}
                   className="w-9 h-10"
                   resizeMode="contain"
                 />
               </View>
+            </View>
+
+            <SearchInput />
+
+            <View className="w-full flex-1 pt-5 pb-8">
+              <Text className="text-gray-100 text-lg font-pregular mb-3">
+                Latest Videos
+              </Text>
+              <Trending posts={[{ id: 1 }, { id: 2 }, { id: 3 }] ?? []} />
             </View>
           </View>
         )}
